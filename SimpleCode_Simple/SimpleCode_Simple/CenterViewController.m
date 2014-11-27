@@ -82,35 +82,35 @@
     
     switch ([btn tag]) {
         case 0:
-            [self willChangeValueForKey:@"number"];
-            number = 0;
-            [self didChangeValueForKey:@"number"];
+            [self changeNumber:0];
             break;
         case 1:
-            [self willChangeValueForKey:@"number"];
-            number = 1;
-            [self didChangeValueForKey:@"number"];
+            [self changeNumber:1];
             break;
         case 2:
-            [self willChangeValueForKey:@"number"];
-            number = 2;
-            [self didChangeValueForKey:@"number"];
+            [self changeNumber:2];
             break;
         case 3:
-            [self willChangeValueForKey:@"number"];
-            number = 3;
-            [self didChangeValueForKey:@"number"];
+            [self changeNumber:3];
             break;
         default:
             break;
     }
 }
 
+-(void) changeNumber:(int) value
+{
+    if (number == value)
+        return;
+    
+    [self willChangeValueForKey:@"number"];
+    number = value;
+    [self didChangeValueForKey:@"number"];
+    
+}
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"From KVO");
-    
     if([keyPath isEqualToString:@"number"])
     {
         id oldC = [change objectForKey:NSKeyValueChangeOldKey];
