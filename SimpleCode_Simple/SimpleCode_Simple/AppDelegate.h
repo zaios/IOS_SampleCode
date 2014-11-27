@@ -1,14 +1,13 @@
-//
-//  AppDelegate.h
-//  SimpleCode_Simple
-//
-//  Created by LoWeiCheng on 2014/11/24.
-//  Copyright (c) 2014年 LoWeiCheng. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
+#import "CenterViewController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    CenterViewController* m_centerViewController;
+}
+
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.m
-//  SimpleCode_Simple
-//
-//  Created by LoWeiCheng on 2014/11/24.
-//  Copyright (c) 2014年 LoWeiCheng. All rights reserved.
-//
 
 #import "AppDelegate.h"
 
@@ -17,6 +10,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //Init CenterViewController
+    m_centerViewController = [[CenterViewController alloc] init];
+    UINavigationController* centernavigationController = [[[UINavigationController alloc] initWithRootViewController:m_centerViewController] autorelease];
+    
+    self.window.rootViewController = centernavigationController;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

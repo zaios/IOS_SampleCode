@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CenterViewController : UIViewController
+{
+    UIButton*                       m_button_David;
+    UIButton*                       m_button_John;
+    UIButton*                       m_button_Henry;
+    UIButton*                       m_button_Jack;
+    
+    NSMutableArray*                 m_button_List;
+    
+    NSInteger                       number;
+}
 
 @end
 

@@ -1,7 +1,6 @@
-/* 
-  Simple.strings
-  SimpleCode_Simple
 
-  Created by LoWeiCheng on 2014/11/26.
-  Copyright (c) 2014年 LoWeiCheng. All rights reserved.
-*/
+
+"ID_BUTTON_DAVID"       = "David";
+"ID_BUTTON_JOHN"        = "John";
+"ID_BUTTON_HENRY"       = "Henry";
+"ID_BUTTON_JACK"        = "Jack";
